@@ -91,11 +91,11 @@ footer {
     gap: 20px;
 }
 
-.card {
+.card{
     background-color: var(--color-blue);;
 }
 
-.card_img-box {
+.card_image-container img {
     width: 100%;
 }
 
@@ -109,7 +109,7 @@ footer {
     grid-template-columns: 1fr 1fr;
 }
 
-.card_price {
+.card_who {
     background-color: var(--color-blue);
     filter: brightness(90%);
     padding: 5px 20px;
@@ -126,6 +126,8 @@ footer {
     height: 100%;
     position: fixed;
     top: 0;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .modal {
@@ -133,4 +135,20 @@ footer {
     width: 90%;
     height: 90%;
     margin: 5vh auto;
+    position: relative;
+}
+
+.modal .close-modal{
+    color: black;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+    
+}
+
+/*-------=MODAL.ACTIVE --000 */
+.modal-overlay.active {
+    opacity: 1;
+    visibility: hidden;
 }
